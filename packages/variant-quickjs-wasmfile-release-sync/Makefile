@@ -75,7 +75,7 @@ SYNC=SYNC
 CFLAGS_WASM_BROWSER=$(CFLAGS_WASM)
 
 # Emscripten options - variant & target specific
-CFLAGS_WASM+=-O0
+CFLAGS_WASM+=-O2
 CFLAGS_WASM+=-flto
 CFLAGS_WASM+=-g2
 CFLAGS_WASM+=--closure 1
