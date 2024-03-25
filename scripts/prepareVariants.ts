@@ -182,8 +182,9 @@ const SyncModeFlags = {
 
 const ReleaseModeFlags = {
   [ReleaseMode.Release]: [
-    `-Oz`,
+    `-O2`,
     `-flto`,
+    `-g2`,
     `--closure 1`,
     `-s FILESYSTEM=0`,
     `--pre-js $(TEMPLATES)/pre-extension.js`,
@@ -537,7 +538,7 @@ function renderReadmeSummary(
   const hasExports = Object.keys(variant.exports).join(" ")
   return `### ${packageJson.name}
 
-[Docs](${packageURL}) | 
+[Docs](${packageURL}) |
 ${variant.description}
 
 | Variable            |    Setting                     |    Description    |

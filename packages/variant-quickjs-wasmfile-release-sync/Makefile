@@ -75,8 +75,9 @@ SYNC=SYNC
 CFLAGS_WASM_BROWSER=$(CFLAGS_WASM)
 
 # Emscripten options - variant & target specific
-CFLAGS_WASM+=-Oz
+CFLAGS_WASM+=-O2
 CFLAGS_WASM+=-flto
+CFLAGS_WASM+=-g2
 CFLAGS_WASM+=--closure 1
 CFLAGS_WASM+=-s FILESYSTEM=0
 CFLAGS_WASM+=--pre-js $(TEMPLATES)/pre-extension.js
