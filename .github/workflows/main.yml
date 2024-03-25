@@ -98,3 +98,8 @@ jobs:
 
       - name: Check format
         run: yarn check:format
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release.tgz
+          path: build/tar/@jitl-quickjs-wasmfile-release-sync.tgz
